@@ -11,11 +11,15 @@ This template should help get you started developing with Vue 3 in Vite.
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
-
+1. Create a repo and clone it to local
+2. Create a project and copy it to the git folder
+   
 ```sh
+npm create vue@latest
 npm install
 ```
-
+3. Commit and push all the changes
+   
 ### Compile and Hot-Reload for Development
 
 ```sh
@@ -23,7 +27,17 @@ npm run dev
 ```
 
 ### Compile and Minify for Production
-
+1. Adding base path inside vite.config.js - export default defineConfig()
+   base: "/REPONAME/",
 ```sh
 npm run build
+```
+2. Adding dist folder
+```sh
+git add dist -f //-f is for removing dist from .gitignore
+```
+4. Commit the changes
+5. Creating gh-pages subtree
+```sh
+git subtree push --prefix dist origin gh-pages
 ```
