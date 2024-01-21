@@ -32,12 +32,15 @@ npm run dev
 ```sh
 npm run build
 ```
-2. Adding dist folder
+2. Adding dist folder (-f is for removing dist from .gitignore)
 ```sh
-git add dist -f //-f is for removing dist from .gitignore
+git add dist -f
 ```
 4. Commit the changes
-5. Creating gh-pages subtree
+```sh
+git commit -m "Adding dist"
+```
+6. Creating gh-pages subtree
 ```sh
 git subtree push --prefix dist origin gh-pages
 ```
