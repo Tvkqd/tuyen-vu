@@ -36,11 +36,29 @@ npm run build
 ```sh
 git add dist -f
 ```
-4. Commit the changes
+3. Commit the changes
 ```sh
 git commit -m "Adding dist"
 ```
-6. Creating gh-pages subtree
+4. Creating gh-pages subtree
 ```sh
 git subtree push --prefix dist origin gh-pages
+```
+5. Future deployment
+```sh
+npm install gh-pages --save-dev
+```
+- Add both of these inside package.json
+```sh
+"scripts": {
+  ...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  ...
+}
+```
+- Commit all the changes
+- Then
+```sh
+npm run deploy
 ```
